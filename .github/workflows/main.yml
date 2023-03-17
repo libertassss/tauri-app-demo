@@ -23,9 +23,9 @@ jobs:
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable
       - name: install trunk stable
-        uses: cargo install --locked trunk
+        run: cargo install --locked trunk
       - name: add wasm32
-        uses: rustup target add wasm32-unknown-unknown
+        run: rustup target add wasm32-unknown-unknown
       - name: install dependencies (ubuntu only)
         if: matrix.platform == 'ubuntu-20.04'
         run: |
