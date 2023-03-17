@@ -4,6 +4,10 @@ target = "./index.html"
 [watch]
 ignore = ["./src-tauri"]
 
+[dependencies]
+yew = { version = "0.14.3", features = ["std_web"] }
+trunk = "0.16.0"
+
 [serve]
 address = "127.0.0.1"
 port = 3000
